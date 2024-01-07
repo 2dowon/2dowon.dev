@@ -112,8 +112,8 @@ type TCOLOR_TYPE = {
 마지막으로 `keyof` 키워드를 이용함으로써 object 타입의 key로 올 수 있는 타입에 제한을 줄 수 있다.
 
 ```tsx
-type TCOLOR_TYPE = typeof COLOR_CODES
-type TCOLOR_OF_COLOR_CODES = keyof colorType
+type TCOLOR_TYPE = typeof COLOR_CODES;
+type TCOLOR_OF_COLOR_CODES = keyof colorType;
 ```
 
 > `TCOLOR_OF_COLOR_CODES`은 아래처럼 정의된다
