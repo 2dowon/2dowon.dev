@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "gatsby": "^5.13.1",
+    "gatsby-plugin-advanced-sitemap": "^2.1.0",
     "gatsby-plugin-feed": "^5.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.13.0",
     "gatsby-plugin-manifest": "^5.13.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-remark-images": "^7.13.0",
     "gatsby-remark-prismjs": "^7.13.0",

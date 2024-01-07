@@ -25,6 +25,15 @@ module.exports = {
     },
   },
   plugins: [
+    "gatsby-plugin-advanced-sitemap",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://2dowon.com",
+        sitemap: "https://2dowon.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     "gatsby-plugin-postcss",
     {
       resolve: `gatsby-plugin-google-fonts`,
