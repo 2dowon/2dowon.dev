@@ -1,13 +1,13 @@
-import React, { useEffect } from "react"
+import React, { useEffect } from "react";
 
-const src = "https://utteranc.es/client.js"
-const branch = "master"
+const src = "https://utteranc.es/client.js";
+const branch = "master";
 
 export const Utterances = ({ repo, theme }) => {
-  const rootElm = React.createRef()
+  const rootElm = React.createRef();
 
   useEffect(() => {
-    const utterances = document.createElement("script")
+    const utterances = document.createElement("script");
     const utterancesConfig = {
       src,
       repo,
@@ -17,13 +17,13 @@ export const Utterances = ({ repo, theme }) => {
       async: true,
       "issue-term": "pathname",
       crossorigin: "anonymous",
-    }
+    };
 
-    Object.keys(utterancesConfig).forEach(configKey => {
-      utterances.setAttribute(configKey, utterancesConfig[configKey])
-    })
-    rootElm.current.appendChild(utterances)
-  }, [])
+    Object.keys(utterancesConfig).forEach((configKey) => {
+      utterances.setAttribute(configKey, utterancesConfig[configKey]);
+    });
+    rootElm.current.appendChild(utterances);
+  }, []);
 
-  return <div className="utterances" ref={rootElm} />
-}
+  return <div className="utterances" ref={rootElm} />;
+};
