@@ -5,7 +5,7 @@ description: "Next13의 Data Fetching은 Next12와 뭐가 다를까"
 tags: ["next"]
 ---
 
-[이전 글]()에서 얘기했듯이, Next13에서 데이터를 가져오는 Component는 Server Component로 구현하는 것을 추천한다. 물론 반드시 그래야 하는 것은 아니고, Client Component에서 데이터를 가져오고 싶다면 Next12에서 했던 것처럼 SWR이나 React Query와 같은 라이브러리를 이용하면 된다.
+[이전 글](https://2dowon.com/next/next13-server-component-and-client-component/)에서 얘기했듯이, Next13에서 데이터를 가져오는 Component는 Server Component로 구현하는 것을 추천한다. 물론 반드시 그래야 하는 것은 아니고, Client Component에서 데이터를 가져오고 싶다면 Next12에서 했던 것처럼 SWR이나 React Query와 같은 라이브러리를 이용하면 된다.
 
 하지만 Next13에서 데이터를 가져올 때 사용하는 fetch 함수를 이용하면 자동으로 요청의 중복을 제거해주고, 캐시된 값을 재사용하는 기능을 제공하고 있어 해당 글에서는 Client Component일 경우일지라도 Client Component를 다시 Server Component로 감싸서 데이터를 가져오는 방식을 사용해보려고 한다.
 
