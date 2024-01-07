@@ -15,7 +15,7 @@ module.exports = {
       summary: `Frontend Engineer`,
     },
     description: `2dowon's log`,
-    // siteUrl: `https://2dowon-log.netlify.app`,
+    siteUrl: `https://2dowon.com`,
     social: {
       github: `https://github.com/2dowon`,
       linkedin: "https://www.linkedin.com/in/2dowon/",
