@@ -23,6 +23,7 @@ const Seo = ({
             description
             social {
               github
+              linkedin
             }
           }
         }

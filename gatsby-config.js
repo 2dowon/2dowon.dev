@@ -17,7 +17,11 @@ module.exports = {
     description: `2dowon's log`,
     // siteUrl: `https://2dowon-log.netlify.app`,
     social: {
-      github: `2dowon`,
+      github: `https://github.com/2dowon`,
+      linkedin: "https://www.linkedin.com/in/2dowon/",
+    },
+    comment: {
+      utterances: "2dowon/2dowon.dev",
     },
   },
   plugins: [

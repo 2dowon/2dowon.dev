@@ -1,66 +1,66 @@
-import React, { useState, useEffect } from "react"
-import PropTypes from "prop-types"
-import filter from "lodash/filter"
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import filter from "lodash/filter";
 
-import queryString from "query-string"
+import queryString from "query-string";
 
-import { graphql, navigate } from "gatsby"
-import TagList from "../components/TagList"
-import PostList from "../components/PostList"
-import Layout from "../components/Layout"
+import { graphql, navigate } from "gatsby";
+import TagList from "../components/TagList";
+import PostList from "../components/PostList";
+import Layout from "../components/Layout";
+import { koreanTagNames } from "../utils/constants";
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group: tags, nodes: posts },
   },
 }) => {
-  const [selected, setSelected] = useState()
-  const [filteredPosts, setFilteredPosts] = useState([])
+  const [selected, setSelected] = useState();
+  const [filteredPosts, setFilteredPosts] = useState([]);
 
-  let query = null
+  let query = null;
   if (typeof document !== "undefined") {
-    query = document.location.search
+    query = document.location.search;
   }
 
   useEffect(() => {
     if (!selected) {
-      setFilteredPosts(posts)
-      return
+      setFilteredPosts(posts);
+      return;
     }
 
     setFilteredPosts(
-      filter(posts, post => post.frontmatter.tags.indexOf(selected) !== -1)
-    )
-  }, [selected, posts])
+      filter(posts, (post) => post.frontmatter.tags.indexOf(selected) !== -1)
+    );
+  }, [selected, posts]);
 
   useEffect(() => {
-    const _query = queryString.parse(query)["query"]
-    setSelected(_query)
-  }, [query])
+    const _query = queryString.parse(query)["query"];
+    setSelected(_query);
+  }, [query]);
 
   return (
     <Layout>
       <div>
         {selected ? (
-          <div className="text-body-4 pc:text-heading-6 mb-[1rem] font-bold">
-            There are {filteredPosts.length} post
-            {filteredPosts.length > 1 && "s"} that match #{selected}.
+          <div className="mb-[1rem] text-center text-body-4 font-bold pc:text-heading-6">
+            {koreanTagNames[selected]}
           </div>
         ) : (
-          <div className="text-body-4 pc:text-heading-6 mb-[1rem] font-bold">
-            There are {tags.length} tag{tags.length > 1 && "s"}.
+          <div className="mb-[1rem] text-center text-body-4 font-bold pc:text-heading-6">
+            ALL POSTS
           </div>
         )}
 
         <TagList
-          count
+          count={posts.length}
           tagList={tags}
           selected={selected}
-          onClick={tag => {
+          onClick={(tag) => {
             if (tag === selected) {
-              navigate("/tags")
+              navigate("/tags");
             } else {
-              setSelected(tag)
+              setSelected(tag);
             }
           }}
         />
@@ -68,8 +68,8 @@ const TagsPage = ({
 
       <PostList postList={filteredPosts} />
     </Layout>
-  )
-}
+  );
+};
 
 TagsPage.propTypes = {
   data: PropTypes.shape({
@@ -87,9 +87,9 @@ TagsPage.propTypes = {
       }),
     }),
   }),
-}
+};
 
-export default TagsPage
+export default TagsPage;
 
 export const pageQuery = graphql`
   query {
@@ -115,4 +115,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
