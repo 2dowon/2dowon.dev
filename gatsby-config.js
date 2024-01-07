@@ -9,18 +9,19 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `2dowon' log`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `2dowon`,
+      summary: `Frontend Engineer`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `2dowon's log`,
+    // siteUrl: `https://2dowon-log.netlify.app`,
     social: {
-      twitter: `kylemathews`,
+      github: `2dowon`,
     },
   },
   plugins: [
+    "gatsby-plugin-postcss",
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

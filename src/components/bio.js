@@ -19,7 +19,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            github
           }
         }
       }
@@ -31,25 +31,34 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social
 
   return (
-    <div className="bio">
+    <div className="flex items-center mb-[4rem] bio">
       <StaticImage
-        className="bio-avatar"
+        className="rounded-[100%] min-w-[5rem] mr-[1rem]"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
-        width={50}
-        height={50}
+        src="../images/profile-pic.jpeg"
+        width={100}
+        height={100}
         quality={95}
         alt="Profile picture"
       />
       {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
-          </a>
-        </p>
+        <div>
+          <div className="font-bold text-detail-1 bg-green py-[0.3rem] rounded-md text-ivory text-center w-[6rem] font-serif">
+            @{author.name}
+          </div>
+          <div className="text-gray-8 mb-[0.5rem] mt-[0.2rem]">
+            {author?.summary || null}
+          </div>
+          <div className="flex gap-[1rem]">
+            <a
+              className="pc:hover:text-green text-gray-10"
+              href={`https://github.com/${social?.github || ``}`}
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
       )}
     </div>
   )
