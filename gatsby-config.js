@@ -21,6 +21,13 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`DM+Serif+Display:ital@0;1`],
+        display: "swap",
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
