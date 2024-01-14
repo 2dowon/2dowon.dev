@@ -1,6 +1,7 @@
 ---
 title: Next13에서 Server Component와 Client Component
 date: "2023-07-09 23:31:53"
+thumbnail: ./cover.png
 tags: ["next"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Next13의 Data Fetching
 date: "2023-07-23 23:31:53"
+thumbnail: ./cover.png
 tags: ["next"]
 ---
 

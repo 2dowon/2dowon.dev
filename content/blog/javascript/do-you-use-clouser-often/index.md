@@ -1,6 +1,7 @@
 ---
 title: 클로저를 자주 사용하시나요?
 date: "2022-09-18 23:18:53"
+thumbnail: ./cover.png
 tags: ["javascript"]
 ---
 

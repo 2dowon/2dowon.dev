@@ -1,6 +1,7 @@
 ---
 title: 2022 회고
 date: 2022-12-31 16:02:24
+thumbnail: ./cover.png
 tags: ["retrospects"]
 ---
 

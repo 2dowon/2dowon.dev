@@ -1,6 +1,7 @@
 ---
 title: Type Widening & Type Narrowing
 date: "2022-10-16 21:31:53"
+thumbnail: ./cover.png
 tags: ["typescript"]
 ---
 

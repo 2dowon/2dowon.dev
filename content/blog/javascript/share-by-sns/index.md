@@ -1,6 +1,7 @@
 ---
 title: JS로 SNS 공유 기능 구현하기
 date: "2021-10-12 17:10:11"
+thumbnail: ./cover.png
 tags: ["javascript"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Safari(iOS)에서 new Date 이슈
 date: 2022-03-16 21:03:34
+thumbnail: ./cover.png
 tags: ["javascript"]
 ---
 

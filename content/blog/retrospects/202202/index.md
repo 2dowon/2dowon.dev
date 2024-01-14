@@ -1,6 +1,7 @@
 ---
 title: 2022년 2월
 date: 2022-02-27 22:02:24
+thumbnail: ./cover.png
 tags: ["retrospects"]
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: 마우스 따라다니는 원 만들기
 date: 2021-02-15 10:02:26
+thumbnail: ./cover.png
 tags: ["javascript"]
 ---
 

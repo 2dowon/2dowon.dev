@@ -1,7 +1,7 @@
 ---
 title: Axios Interceptors로 API 관리
 date: 2021-11-24 16:11:21
-description: "Axios의 Interceptors를 이용하면 then이나 catch로 처리되기 전에 요청이나 응답을 가로챌 수 있다. 따라서 이를 이용하면 Axios를 이용해 API로 통신할 때 항상 사용하는 baseURL이나 headers와 같은 부분을 한 번에 모든 Axios 요청에 관해 처리해둘 수 있다...."
+thumbnail: ./cover.png
 tags: ["javascript"]
 ---
 

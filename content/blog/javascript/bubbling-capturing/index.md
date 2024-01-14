@@ -1,6 +1,7 @@
 ---
 title: Bubbling & Capturing
 date: 2021-02-18 10:02:28
+thumbnail: ./cover.png
 tags: ["javascript"]
 ---
 

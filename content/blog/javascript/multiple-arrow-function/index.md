@@ -1,5 +1,6 @@
 ---
 title: 여러개의 화살표 함수 (=>)
+thumbnail: ./cover.png
 date: 2022-03-19 23:02:00
 tags: ["javascript"]
 ---

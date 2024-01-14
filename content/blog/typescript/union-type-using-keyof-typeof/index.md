@@ -1,6 +1,7 @@
 ---
 title: object의 key로 union type 만들기
 date: "2022-11-05 23:31:53"
+thumbnail: ./cover.png
 tags: ["typescript"]
 ---
 

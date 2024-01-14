@@ -1,6 +1,7 @@
 ---
 title: 2022년 1월
 date: 2022-01-31 16:02:24
+thumbnail: ./cover.png
 tags: ["retrospects"]
 ---
 
