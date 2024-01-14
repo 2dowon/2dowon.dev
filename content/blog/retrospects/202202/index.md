@@ -1,7 +1,6 @@
 ---
 title: 2022년 2월
 date: 2022-02-27 22:02:24
-description: "협업, next.js, 블랙커피 스터디, crossfit"
 tags: ["retrospects"]
 ---
 

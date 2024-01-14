@@ -1,7 +1,6 @@
 ---
 title: 2022년 1월
 date: 2022-01-31 16:02:24
-description: "vue.js, test code, TDD, algorithm, blog"
 tags: ["retrospects"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: 2022년 3월
 date: 2022-04-2 22:02:24
-description: "코로나, Next.js, Jotai, Tailwind"
 tags: ["retrospects"]
 ---
 

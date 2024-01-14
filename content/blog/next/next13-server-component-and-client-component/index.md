@@ -1,7 +1,6 @@
 ---
 title: Next13에서 Server Component와 Client Component
 date: "2023-07-09 23:31:53"
-description: "Next13에서 Server Component와 Client Component는 뭐가 다르지"
 tags: ["next"]
 ---
 

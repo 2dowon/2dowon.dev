@@ -36,7 +36,7 @@ const PostList = ({ postList }) => {
   return (
     <div>
       {postList.slice(0, postCount).map((post) => {
-        const { title, date, description, tags } = post.frontmatter;
+        const { title, date, tags } = post.frontmatter;
         const { slug } = post.fields;
 
         return (
@@ -53,15 +53,6 @@ const PostList = ({ postList }) => {
                 </div>
                 <small className="flex justify-end text-gray-7">{date}</small>
               </header>
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: description,
-                  }}
-                  itemProp="description"
-                  className="text-gray-9"
-                />
-              </section>
             </Link>
 
             <div className="mt-[1rem] flex gap-[0.5rem]">

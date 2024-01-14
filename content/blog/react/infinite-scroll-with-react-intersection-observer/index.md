@@ -1,7 +1,6 @@
 ---
 title: react-intersection-observer로 infinite scroll 만들기
 date: "2022-05-21 22:12:35"
-description: "IntersectionObserver API Target element가 Viewport 안에 보여지고 있는지를 관찰하는 API이다. Image Lasy loading, Infinitie Scroll 등을 구현할 때 활용할 수 있는 API로 직접 사용해도 되지만, react-intersection-observer와 같은 라이브러리를..."
 tags: ["react"]
 ---
 

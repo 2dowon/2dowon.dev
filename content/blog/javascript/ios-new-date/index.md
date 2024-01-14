@@ -1,7 +1,6 @@
 ---
 title: Safari(iOS)에서 new Date 이슈
 date: 2022-03-16 21:03:34
-description: "날짜에 따른 조건을 만들기 위해서 new Date 함수를 이용해 Date 객체를 만들어 사용했다. 하지만 Safari(iOS)에서는 제대로 조건이 동작하지 않는 이슈가 발생했다..."
 tags: ["javascript"]
 ---
 

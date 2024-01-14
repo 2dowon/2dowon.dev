@@ -1,7 +1,6 @@
 ---
 title: memo, useMemo, useCallback는 언제 쓰는게 좋을까
 date: "2022-08-23 21:12:35"
-description: "React Hooks는 React에서 기본적으로 제공해주는 hook으로 함수형 컴포넌트에 React의 다른 기능들을 연결해주는 것으로, use로 시작하는 함수들이다. 예를 들어, useEffect, useState, useMemo, useCallback 등이 있다. 이 중에서 useMemo와 useCallback은 렌더링 성능을 최적화하는 상황에서 사용하는 훅이다..."
 tags: ["react"]
 ---
 

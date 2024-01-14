@@ -1,7 +1,6 @@
 ---
 title: object의 key로 union type 만들기
 date: "2022-11-05 23:31:53"
-description: "keyof, typeof를 이용해 object의 key로 union type 만들기"
 tags: ["typescript"]
 ---
 

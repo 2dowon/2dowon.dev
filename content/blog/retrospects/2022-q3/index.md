@@ -1,7 +1,6 @@
 ---
 title: 2022년 3분기 회고
 date: 2022-10-02 22:02:24
-description: "2022년 3분기를 보내며"
 tags: ["retrospects"]
 ---
 

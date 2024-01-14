@@ -1,7 +1,6 @@
 ---
 title: Type Widening & Type Narrowing
 date: "2022-10-16 21:31:53"
-description: "이펙티브 타입스크립트 책을 읽고 - 타입 넓히기와 좁히기에 대해"
 tags: ["typescript"]
 ---
 
@@ -17,11 +16,11 @@ tags: ["typescript"]
 
 ```tsx
 function returnString(string: "x" | "y" | "z") {
-  return string
+  return string;
 }
 
-let x = "x"
-returnString(x)
+let x = "x";
+returnString(x);
 // Argument of type 'string' is not assignable to parameter of type '"x" | "y" | "z"'. (2345)
 ```
 
@@ -41,13 +40,13 @@ returnString 함수의 `'x' | 'y' | 'z'` 유니온 타입의 string을 받아 �
 
 ```tsx
 type Person = {
-  name: string
-  age?: number
-}
+  name: string;
+  age?: number;
+};
 
 function addAge(person: Person) {
   if (person.age) {
-    person.age += 1
+    person.age += 1;
   }
 }
 ```
@@ -61,9 +60,9 @@ Person 타입의 age는 optional하기 때문에 age의 타입은 `number | unde
 ```tsx
 function double(item: string | number) {
   if (typeof item === "string") {
-    return item.concat(item) // item이 string 타입
+    return item.concat(item); // item이 string 타입
   } else {
-    return item * 2 // item이 number 타입
+    return item * 2; // item이 number 타입
   }
 }
 ```
@@ -78,17 +77,17 @@ item의 타입은 `string | number` 이다. item의 타입이 string이면 conca
 
 ```tsx
 interface Student {
-  grade: number
+  grade: number;
 }
 interface Worker {
-  careerYears: number
+  careerYears: number;
 }
 
-type Person = Student | Worker
+type Person = Student | Worker;
 
 function sayGrade(person: Person) {
   if ("grade" in person) {
-    console.log("Hello I'm in " + person.grade + "th grade.")
+    console.log("Hello I'm in " + person.grade + "th grade.");
   }
 }
 ```
@@ -99,30 +98,30 @@ person의 타입은 `Student | Worker` 이다. Student 타입은 grade를 가지
 
 ```tsx
 interface Student {
-  grade: number
+  grade: number;
 }
 interface Worker {
-  careerYears: number
+  careerYears: number;
 }
 
-type Person = Student | Worker
+type Person = Student | Worker;
 
 function isStudent(person: Person): person is Student {
   if ("grade" in person) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
 
 function sayHello(person: Person) {
   if (isStudent(person)) {
-    console.log("Hello I'm in " + person.grade + "th grade.")
+    console.log("Hello I'm in " + person.grade + "th grade.");
   } else {
-    console.log("Hello I'm worker")
+    console.log("Hello I'm worker");
   }
 }
 
-sayHello({ grade: 10 })
+sayHello({ grade: 10 });
 // "Hello I'm in 10th grade."
 ```
 

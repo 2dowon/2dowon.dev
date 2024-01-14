@@ -19,13 +19,15 @@ const BlogPostTemplate = ({
       <article itemScope itemType="http://schema.org/Article">
         <header className="mb-[2rem] w-full border-b-[1px] border-gray-4">
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <div className="w-full text-right text-sm italic text-gray-8">
-            {post.frontmatter.date}
-          </div>
-          <div className="mb-[2rem] mt-[1rem] flex gap-[0.5rem]">
-            {post.frontmatter.tags.map((tag) => {
-              return <Tag tag={tag} />;
-            })}
+          <div className="mb-[2rem] mt-[1rem] flex">
+            <div className="flex gap-[0.5rem]">
+              {post.frontmatter.tags.map((tag) => {
+                return <Tag tag={tag} />;
+              })}
+            </div>
+            <div className="w-full text-right text-sm italic text-gray-8">
+              {post.frontmatter.date}
+            </div>
           </div>
         </header>
         <section
@@ -82,12 +84,7 @@ const BlogPostTemplate = ({
 };
 
 export const Head = ({ data: { markdownRemark: post } }) => {
-  return (
-    <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
-    />
-  );
+  return <Seo title={post.frontmatter.title} />;
 };
 
 export default BlogPostTemplate;
@@ -112,7 +109,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
         tags
       }
     }

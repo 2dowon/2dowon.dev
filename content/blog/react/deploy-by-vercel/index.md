@@ -1,7 +1,6 @@
 ---
 title: React + Next.js - Vercel로 배포하기
 date: "2021-11-16 12:11:53"
-description: "Next.js 프레임워크를 이용해 React 프로젝트를 만들었다면 Vercel로 배포할 수 있다. 참고로 CRA를 이용해서 React 프로젝트를 진행할 때는 GitHub Pages나 Netlify를 이용해서 배포했었다. (GitHub Pages 배포 방법은 이전에도 정리해놓은 글이 있어서..."
 tags: ["react"]
 ---
 

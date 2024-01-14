@@ -1,7 +1,6 @@
 ---
 title: Next13의 Data Fetching
 date: "2023-07-23 23:31:53"
-description: "Next13의 Data Fetching은 Next12와 뭐가 다를까"
 tags: ["next"]
 ---
 

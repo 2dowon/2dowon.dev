@@ -1,7 +1,6 @@
 ---
 title: 2022 회고
 date: 2022-12-31 16:02:24
-description: "주니어 프론트엔드 개발자의 1년차 회고"
 tags: ["retrospects"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: React - FCM으로 웹 푸시 기능 구현하기
 date: "2021-08-22 16:08:23"
-description: "웹 프로젝트를 진행하면서 유저들간의 상호작용시 알림 기능 제공이 필요해 FCM을 통해 웹 푸시 기능을 구현하기로 했다. FCM(Firebase Cloud Messaging)은 Firebase에서 제공해주는 서비스 중 하나로 이를 이용하면 Android, iOS 뿐만 아니라 웹에서도..."
 tags: ["react"]
 ---
 

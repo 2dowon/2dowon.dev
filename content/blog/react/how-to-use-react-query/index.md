@@ -1,7 +1,6 @@
 ---
 title: React Query 사용법
 date: "2021-12-04 23:12:35"
-description: "기존에 진행하던 프로젝트에서는 React Query를 써본 적이 없었는데, 이번에 사용하게 될 주 스택 중 하나가 React Query라서 요새 조금씩 써보고 있는 중이다. 공부하는 김에 아래에서 가볍게 정리해두려고 한다...."
 tags: ["react"]
 ---
 
