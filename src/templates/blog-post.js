@@ -16,11 +16,7 @@ const BlogPostTemplate = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <article itemScope itemType="http://schema.org/Article">
         <header className="mb-[2rem] w-full border-b-[1px] border-gray-4">
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <div className="w-full text-right text-sm italic text-gray-8">

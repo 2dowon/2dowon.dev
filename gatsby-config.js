@@ -9,12 +9,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `2dowon' log`,
+    title: `2dowon.com`,
     author: {
       name: `2dowon`,
       summary: `Frontend Engineer`,
     },
-    description: `2dowon's log`,
+    description: `2dowon 기술 블로그`,
     siteUrl: `https://2dowon.com`,
     social: {
       github: `https://github.com/2dowon`,
@@ -139,7 +139,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
   ],

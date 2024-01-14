@@ -42,7 +42,7 @@ const PostList = ({ postList }) => {
         return (
           <article
             key={slug}
-            className="post-list-item group border-b-[1px] border-gray-4 py-[2rem]"
+            className="group my-[2rem] border-b-[1px] border-gray-4 py-[2rem]"
             itemScope
             itemType="http://schema.org/Article"
           >

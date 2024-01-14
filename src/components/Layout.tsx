@@ -7,7 +7,9 @@ const Layout = ({ children }: PropsWithChildren<{}>) => {
   return (
     <div>
       <Header />
-      <main className="global-wrapper">{children}</main>
+      <main className="mx-auto max-w-[42rem] p-[1.25rem] pc:py-[2.5rem]">
+        {children}
+      </main>
       <footer className="mt-[5rem] text-center">
         © {new Date().getFullYear()}, Built with
         {` `}
