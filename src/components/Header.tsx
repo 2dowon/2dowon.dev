@@ -28,12 +28,13 @@ const Header = () => {
         </svg>
       </Link>
       <div>
-        <Link
-          to="/tags"
+        <a
+          href="https://www.notion.so/Dowon-Lee-5d8a2bc7a6234b63ad24abfd895ee4e9?pvs=4"
+          target="_blank"
           className="text-body-4 text-gray-7 pc:hover:text-green"
         >
-          <FaTags />
-        </Link>
+          RESUME
+        </a>
       </div>
     </header>
   );

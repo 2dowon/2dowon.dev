@@ -1,53 +1,108 @@
-import * as React from "react";
-import { graphql } from "gatsby";
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import filter from "lodash/filter";
 
-import Bio from "../components/Bio";
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
+import queryString from "query-string";
+
+import { graphql, navigate } from "gatsby";
+import TagList from "../components/TagList";
 import PostList from "../components/PostList";
+import Layout from "../components/Layout";
+import Bio from "../components/Bio";
+import { koreanTagNames } from "../utils/constants";
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`;
-  const posts = data.allMarkdownRemark.nodes;
+const TagsPage = ({
+  data: {
+    allMarkdownRemark: { group: tags, nodes: posts },
+  },
+}) => {
+  const [selected, setSelected] = useState();
+  const [filteredPosts, setFilteredPosts] = useState([]);
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    );
+  let query = null;
+  if (typeof document !== "undefined") {
+    query = document.location.search;
   }
 
+  useEffect(() => {
+    if (!selected) {
+      setFilteredPosts(posts);
+      return;
+    }
+
+    setFilteredPosts(
+      filter(posts, (post) => post.frontmatter.tags.indexOf(selected) !== -1)
+    );
+  }, [selected, posts]);
+
+  useEffect(() => {
+    const _query = queryString.parse(query)["query"];
+    setSelected(_query);
+  }, [query]);
+
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <Bio />
-      <PostList postList={posts} />
+      <div>
+        {selected ? (
+          <div className="mb-[1rem] text-center text-body-4 font-bold pc:text-heading-6">
+            {koreanTagNames[selected]}
+          </div>
+        ) : (
+          <div className="mb-[1rem] text-center text-body-4 font-bold pc:text-heading-6">
+            ALL POSTS
+          </div>
+        )}
+
+        <TagList
+          count={posts.length}
+          tagList={tags}
+          selected={selected}
+          onClick={(tag) => {
+            if (tag === selected) {
+              navigate("/tags");
+            } else {
+              setSelected(tag);
+            }
+          }}
+        />
+      </div>
+
+      <PostList postList={filteredPosts} />
     </Layout>
   );
 };
 
-export default BlogIndex;
+TagsPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      group: PropTypes.arrayOf(
+        PropTypes.shape({
+          fieldValue: PropTypes.string.isRequired,
+          totalCount: PropTypes.number.isRequired,
+        }).isRequired
+      ),
+    }),
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }),
+    }),
+  }),
+};
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="2dowon.com" />;
+export default TagsPage;
 
 export const pageQuery = graphql`
-  {
-    site {
-      siteMetadata {
-        title
+  query {
+    allMarkdownRemark(
+      limit: 2000
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
       }
-    }
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         excerpt
         fields {

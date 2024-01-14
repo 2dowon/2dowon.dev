@@ -2,26 +2,14 @@ import React from "react";
 import { Link } from "gatsby";
 import { koreanTagNames } from "../utils/constants";
 
-const TagList = ({ tagList, count, selected }) => {
+const TagList = ({ tagList, count, selected, onClick }) => {
   if (!tagList) {
     return null;
   }
 
-  if (!count) {
-    return (
-      <div>
-        {tagList.map((tag, i) => (
-          <Link key={JSON.stringify({ tag, i })} to={`/tags?query=${tag}`}>
-            <div>{tag}</div>
-          </Link>
-        ))}
-      </div>
-    );
-  }
-
   return (
     <div className="flex flex-wrap gap-[0.8rem]">
-      <Link to="/tags">
+      <Link to="/">
         <div
           className={`${
             selected == undefined
@@ -38,7 +26,7 @@ const TagList = ({ tagList, count, selected }) => {
         return (
           <Link
             key={JSON.stringify({ tag, i })}
-            to={`/tags?query=${tag.fieldValue}`}
+            to={`?query=${tag.fieldValue}`}
           >
             <div
               className={`${
