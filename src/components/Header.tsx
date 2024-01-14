@@ -4,7 +4,7 @@ import { FaTags } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="mt-0 flex w-full items-center justify-between border-b-[1px] border-gray-2 px-[1rem] pc:px-[5rem]">
+    <header className="mt-0 flex w-full items-center justify-between border-b-[1px] border-gray-2 pr-[1rem] pc:px-[5rem]">
       <Link to="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -12,7 +12,7 @@ const Header = () => {
           id="Layer_1"
           x="0px"
           y="0px"
-          width="15rem"
+          width="13rem"
           height="5rem"
           viewBox="0 0 492 185"
           enable-background="new 0 0 492 185"

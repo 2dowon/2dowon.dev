@@ -32,7 +32,7 @@ const Bio = () => {
   const social = data.site.siteMetadata?.social;
 
   return (
-    <div className="bio mb-[4rem] flex items-center">
+    <div className="mb-[1rem] flex items-center pc:mb-[4rem]">
       <StaticImage
         className="mr-[1rem] min-w-[5rem] rounded-[100%]"
         layout="fixed"
