@@ -107,6 +107,11 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
+          thumbnail {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
           date(formatString: "MMMM DD, YYYY")
           title
           tags

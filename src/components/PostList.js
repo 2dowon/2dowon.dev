@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import _ from "lodash";
 import React, { useEffect, useState } from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import Tag from "./Tag";
 
@@ -36,7 +37,7 @@ const PostList = ({ postList }) => {
   return (
     <div>
       {postList.slice(0, postCount).map((post) => {
-        const { title, date, tags } = post.frontmatter;
+        const { title, date, tags, thumbnail } = post.frontmatter;
         const { slug } = post.fields;
 
         return (
@@ -47,6 +48,15 @@ const PostList = ({ postList }) => {
             itemType="http://schema.org/Article"
           >
             <Link to={slug} itemProp="url">
+              <div className="mb-[1rem]">
+                <GatsbyImage
+                  objectFit="cover"
+                  style={{ height: "100%" }}
+                  image={thumbnail?.childImageSharp?.gatsbyImageData}
+                  alt={`${slug} cover image`}
+                  className="rounded-[1rem]"
+                />
+              </div>
               <header>
                 <div className="mb-[1rem] text-body-2 font-bold text-gray-10 pc:text-heading-5 pc:group-hover:text-green">
                   {title}
