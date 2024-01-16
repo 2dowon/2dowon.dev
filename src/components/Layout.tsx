@@ -3,6 +3,7 @@ import React from "react";
 
 import Header from "./Header";
 import Bio from "./Bio";
+import Footer from "./Footer";
 
 const Layout = ({ children }: PropsWithChildren<{}>) => {
   return (
@@ -16,13 +17,7 @@ const Layout = ({ children }: PropsWithChildren<{}>) => {
           {children}
         </main>
       </div>
-      <footer className="mt-[5rem] text-center">
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com" className="ml-[0.3rem] text-green">
-          Gatsby
-        </a>
-      </footer>
+      <Footer className="pb-[3rem] text-center pc:hidden" />
     </div>
   );
 };

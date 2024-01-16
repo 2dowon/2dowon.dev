@@ -8,7 +8,6 @@ import { graphql, navigate } from "gatsby";
 import TagList from "../components/TagList";
 import PostList from "../components/PostList";
 import Layout from "../components/Layout";
-import Bio from "../components/Bio";
 import { koreanTagNames } from "../utils/constants";
 
 const TagsPage = ({
