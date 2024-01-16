@@ -24,10 +24,7 @@ const TagList = ({ tagList, count, selected, onClick }) => {
       {tagList.map((tag, i) => {
         const isSelectedTag = selected === tag.fieldValue;
         return (
-          <Link
-            key={JSON.stringify({ tag, i })}
-            to={`?query=${tag.fieldValue}`}
-          >
+          <Link key={JSON.stringify({ tag, i })} to={`?tag=${tag.fieldValue}`}>
             <div
               className={`${
                 isSelectedTag

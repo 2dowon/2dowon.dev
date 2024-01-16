@@ -36,7 +36,7 @@ const TagsPage = ({
   }, [selected, posts]);
 
   useEffect(() => {
-    const _query = queryString.parse(query)["query"];
+    const _query = queryString.parse(query)["tag"];
     setSelected(_query);
   }, [query]);
 
