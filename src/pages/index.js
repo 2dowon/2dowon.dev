@@ -42,14 +42,13 @@ const TagsPage = ({
 
   return (
     <Layout>
-      <Bio />
       <div>
         {selected ? (
-          <div className="mb-[1rem] text-center text-body-4 font-bold pc:text-heading-6">
+          <div className="mb-[1rem] text-center text-body-4 font-bold italic pc:text-heading-6">
             {koreanTagNames[selected]}
           </div>
         ) : (
-          <div className="mb-[1rem] text-center text-body-4 font-bold pc:text-heading-6">
+          <div className="mb-[1rem] text-center text-body-4 font-bold italic pc:text-heading-6">
             ALL POSTS
           </div>
         )}
@@ -67,7 +66,6 @@ const TagsPage = ({
           }}
         />
       </div>
-
       <PostList postList={filteredPosts} />
     </Layout>
   );
