@@ -3,8 +3,6 @@ import _ from "lodash";
 import React, { useEffect, useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-import Tag from "./Tag";
-
 const checkIsScrollAtBottom = () => {
   return (
     document.documentElement.scrollHeight -
@@ -35,43 +33,37 @@ const PostList = ({ postList }) => {
   }, [postList]);
 
   return (
-    <div>
+    <div className="my-[1rem] flex flex-col gap-[2rem] pc:my-[3rem] pc:gap-[3rem]">
       {postList.slice(0, postCount).map((post) => {
         const { title, date, tags, thumbnail } = post.frontmatter;
         const { slug } = post.fields;
 
         return (
-          <article
-            key={slug}
-            className="group my-[2rem] border-b-[1px] border-gray-4 py-[2rem]"
-            itemScope
-            itemType="http://schema.org/Article"
-          >
-            <Link to={slug} itemProp="url">
-              <div className="mb-[1rem]">
-                <GatsbyImage
-                  objectFit="cover"
-                  style={{ height: "100%" }}
-                  image={thumbnail?.childImageSharp?.gatsbyImageData}
-                  alt={`${slug} cover image`}
-                  className="rounded-[1rem]"
-                />
-              </div>
-              <header>
-                <div className="mb-[1rem] text-body-2 font-bold text-gray-10 pc:text-heading-5 pc:group-hover:text-green">
-                  {title}
-                </div>
-                <small className="flex justify-end text-gray-7">{date}</small>
-              </header>
-            </Link>
+          <Link to={slug} itemProp="url">
+            <article
+              key={slug}
+              className="rounded-[1rem] bg-white transition ease-in-out hover:scale-[1.01] hover:shadow-md"
+              itemScope
+              itemType="http://schema.org/Article"
+            >
+              <GatsbyImage
+                objectFit="cover"
+                style={{ height: "100%" }}
+                image={thumbnail?.childImageSharp?.gatsbyImageData}
+                alt={`${slug} cover image`}
+                className="rounded-t-[1rem]"
+              />
 
-            <div className="mt-[1rem] flex gap-[0.5rem]">
-              {tags &&
-                tags.map((tag) => {
-                  return <Tag tag={tag} />;
-                })}
-            </div>
-          </article>
+              <div className="px-[1rem] pb-[1rem] pt-[0.5rem] pc:px-[1.5rem] pc:pb-[2rem] pc:pt-[1rem]">
+                <header>
+                  <div className="mb-[1rem] text-body-4 font-bold text-gray-10 pc:text-heading-5">
+                    {title}
+                  </div>
+                  <small className="flex justify-end text-gray-7">{date}</small>
+                </header>
+              </div>
+            </article>
+          </Link>
         );
       })}
     </div>

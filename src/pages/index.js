@@ -12,7 +12,7 @@ import Bio from "../components/Bio";
 import Seo from "../components/Seo";
 import { koreanTagNames } from "../utils/constants";
 
-const TagsPage = ({
+const Home = ({
   data: {
     allMarkdownRemark: { group: tags, nodes: posts },
   },
@@ -80,7 +80,7 @@ const TagsPage = ({
   );
 };
 
-TagsPage.propTypes = {
+Home.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       group: PropTypes.arrayOf(
@@ -100,7 +100,7 @@ TagsPage.propTypes = {
 
 export const Head = () => <Seo title="2dowon.com" />;
 
-export default TagsPage;
+export default Home;
 
 export const pageQuery = graphql`
   query {
