@@ -8,6 +8,8 @@ import { graphql, navigate } from "gatsby";
 import TagList from "../components/TagList";
 import PostList from "../components/PostList";
 import Layout from "../components/Layout";
+import Bio from "../components/Bio";
+import Seo from "../components/Seo";
 import { koreanTagNames } from "../utils/constants";
 
 const TagsPage = ({
@@ -40,8 +42,11 @@ const TagsPage = ({
   }, [query]);
 
   return (
-    <Layout>
-      <div>
+    <Layout
+      mainClassName="mx-auto flex max-w-[60rem] pc:flex-row-reverse mobile:flex-col-reverse mobile:flex-col mt-[5rem]"
+      footerClassName="pc:hidden"
+    >
+      <div className="max-w-[45rem] p-[1.25rem] pc:mr-[18rem]">
         {selected ? (
           <div className="mb-[1rem] text-center text-body-4 font-bold italic pc:text-heading-6">
             {koreanTagNames[selected]}
@@ -64,8 +69,13 @@ const TagsPage = ({
             }
           }}
         />
+
+        <PostList postList={filteredPosts} />
       </div>
-      <PostList postList={filteredPosts} />
+
+      <div className="pc:fixed pc:pt-[1.25rem]">
+        <Bio />
+      </div>
     </Layout>
   );
 };
@@ -87,6 +97,8 @@ TagsPage.propTypes = {
     }),
   }),
 };
+
+export const Head = () => <Seo title="2dowon.com" />;
 
 export default TagsPage;
 

@@ -1,10 +1,9 @@
 import { Link } from "gatsby";
 import * as React from "react";
-import { FaTags } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="fixed z-10 mt-0 flex w-full items-center justify-between border-b-[1px] border-gray-2 bg-gray-1 pr-[1rem] pc:px-[5rem]">
+    <header className="fixed top-0 z-10 mt-0 flex w-full items-center justify-between border-b-[1px] border-gray-2 bg-gray-1 pr-[1rem] pc:px-[5rem]">
       <Link to="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"

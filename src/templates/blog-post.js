@@ -15,7 +15,11 @@ const BlogPostTemplate = ({
   const utterances = site.siteMetadata.comment.utterances;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout
+      location={location}
+      title={siteTitle}
+      mainClassName="bg-white p-[1rem] pc:px-[5rem] pc:pb-[3rem] mt-[6rem] rounded-3xl mb-[3rem] max-w-[55rem] mx-auto"
+    >
       <article itemScope itemType="http://schema.org/Article">
         <header className="mb-[2rem] w-full border-b-[1px] border-gray-4">
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
@@ -36,11 +40,8 @@ const BlogPostTemplate = ({
           className="pb-[3rem]"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
-      <nav className="blog-post-nav mb-[5rem]">
+      <nav className="blog-post-nav my-[3rem]">
         <ul
           style={{
             display: `flex`,
