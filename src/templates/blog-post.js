@@ -21,7 +21,9 @@ const BlogPostTemplate = ({
     >
       <article itemScope itemType="http://schema.org/Article">
         <header className="mb-[2rem] w-full border-b-[1px] border-gray-4">
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <h1 itemProp="headline" className="text-[2rem] pc:text-4xl">
+            {post.frontmatter.title}
+          </h1>
           <div className="mb-[2rem] mt-[1rem] flex">
             <div className="flex gap-[0.5rem]">
               {post.frontmatter.tags.map((tag) => {
